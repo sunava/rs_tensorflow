@@ -1,0 +1,8 @@
+annotator:
+  implementation: rs_TenserFlowAnnotator
+  name: TenserFlowAnnotator
+parameters:
+  modelName: 'model'
+capabilities:
+  inputs: {}
+  outputs: {}

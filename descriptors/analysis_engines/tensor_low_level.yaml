@@ -1,0 +1,9 @@
+ae:
+  name: mongo_low_level
+fixedflow:
+#  - Trigger
+  - CollectionReader
+  - ImagePreprocessor
+  - TenserFlowAnnotator
+CollectionReader:
+  camera_config_files: ['config_mongodb_playback.ini']
