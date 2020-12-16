@@ -1,0 +1,3 @@
+[submodule "cppflow2"]
+	path = cppflow2
+	url = https://github.com/serizba/cppflow/tree/cppflow2
