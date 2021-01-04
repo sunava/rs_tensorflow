@@ -5,7 +5,7 @@
 //RS
 #include <robosherlock/scene_cas.h>
 #include <robosherlock/utils/time.h>
-#include "../include/cppflow/include/cppflow.h"
+#include "../include/cppflow/include/cppflow/cppflow.h"
 
 #include <ros/package.h>
 
