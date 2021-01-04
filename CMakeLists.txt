@@ -53,5 +53,5 @@ find_additional_files()
 #If you want to divide your projects into subprojects include the subdirectories
 #each containing a CMakeLists.txt here
 #add_subdirectory(src/xxx)
-rs_add_library(rs_TenserFlowAnnotator src/TensorFlowAnnotator.cpp)
+rs_add_library(rs_TenserFlowAnnotator src/TensorFlowAnnotatorExample.cpp)
 target_link_libraries(rs_TenserFlowAnnotator ${catkin_LIBRARIES}  "${TENSORFLOW_LIB}")

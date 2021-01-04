@@ -1,3 +1,4 @@
-[submodule "cppflow2"]
-	path = cppflow2
-	url = https://github.com/serizba/cppflow/tree/cppflow2
+[submodule "include/cppflow"]
+	path = include/cppflow
+	url = https://github.com/serizba/cppflow.git
+    branch = cppflow2
