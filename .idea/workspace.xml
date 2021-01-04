@@ -10,6 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15052b29-5f66-41f5-a5ed-148e3deee14c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EASE_R02_1obj_test/saved_model.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EASE_R02_1obj_test/variables/variables.data-00000-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EASE_R02_1obj_test/variables/variables.data-00001-of-00002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EASE_R02_1obj_test/variables/variables.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pictures/000335-color.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pictures/000409-color.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pictures/000437-color.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pictures/000467-color.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pictures/000568-color.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TensorFlowAnnotatorExample.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TensorFlowAnnotatorExample.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,11 +68,22 @@
       <updated>1609752033445</updated>
       <workItem from="1609752034570" duration="7000" />
       <workItem from="1609752052347" duration="211000" />
-      <workItem from="1609752676790" duration="20000" />
+      <workItem from="1609752676790" duration="1675000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

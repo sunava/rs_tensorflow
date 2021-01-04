@@ -25,8 +25,14 @@ public:
     TyErrorId initialize(AnnotatorContext &ctx)
     {
         outInfo("initialize");
-        rosPath = ros::package::getPath("rs_tensorflow");
+        //example if you use your own model
+       /* rosPath = ros::package::getPath("rs_tensorflow");
         fullPath = rosPath + "/data/EASE_R02_1obj_test" ;
+        picturePath = rosPath + "/data/pictures/";*/
+
+       //just for the cppflow example purpose
+        rosPath = ros::package::getPath("rs_tensorflow");
+        fullPath = rosPath + "/include/cppflow/examples/load_model/model" ;
         picturePath = rosPath + "/data/pictures/";
         return UIMA_ERR_NONE;
     }
@@ -41,33 +47,20 @@ public:
     {
         outInfo("process start");
         rs::StopWatch clock;
-        rs::SceneCas cas(tcas);
-        pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud_ptr(new pcl::PointCloud<pcl::PointXYZRGBA>);
-        cas.get(VIEW_CLOUD,*cloud_ptr);
 
-        std::string img_paths[] { picturePath + "000335-color.jpg", picturePath + "000409-color.jpg", picturePath + "000437-color.jpg", picturePath + "000467-color.jpg", picturePath + "000568-color.jpg"};
+        /*in the follow the code is from https://github.com/serizba/cppflow/tree/master/examples/load_model to
+        show a working example*/
 
+        auto input = cppflow::fill({10, 5}, 1.0f);
         cppflow::model model(fullPath);
+        auto output = model(input);
 
+        outInfo("" << output);
 
-        cppflow::tensor cm {1066.778, 0.0, 312.9869, 0.0, 1067.487, 241.3109, 0.0, 0.0, 1.0};
-        cppflow::tensor cm_shape {1,3,3};
+        auto values = output.get_data<float>();
 
-        cm = cppflow::reshape(cppflow::cast(cm, TF_DOUBLE, TF_FLOAT), cm_shape);
-
-        outInfo("Input cameramatrix: " << std::endl << cm);
-
-        for (auto img_path : img_paths)
-        {
-            outInfo("" << img_path << ":");
-
-            auto input = cppflow::decode_jpeg(cppflow::read_file(std::string(img_path)));
-            input = cppflow::cast(input, TF_UINT8, TF_FLOAT);
-            input = cppflow::expand_dims(input, 0);
-
-            auto output = model({{"serving_default_camera_matrix_input:0", cm}, {"serving_default_input_2:0", input}}, {"StatefulPartitionedCall:0", "StatefulPartitionedCall:1"})[0]; // this ([0]) takes only the pose
-
-            outInfo("output : " << output);
+        for (auto v : values) {
+            outInfo("" << v);
         }
 
 
